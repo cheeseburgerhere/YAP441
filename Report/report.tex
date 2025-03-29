@@ -1,0 +1,93 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{balance} % For balancing last page columns
+
+% Set margins for US Letter paper
+\usepackage[letterpaper,
+            left=0.625in,
+            right=0.625in,
+            top=0.75in,
+            bottom=1in]{geometry}
+
+% Section numbering with Roman numerals
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+
+\begin{document}
+
+\title{Preparation of Papers in Two-Column Format for IEEE Conference Proceedings}
+
+\author{J.~Q.~Author\\
+IEEE Conference Publishing\\
+445 Hoes Lane\\
+Piscataway, NJ 08854 USA}
+
+\maketitle
+
+\begin{abstract}
+These instructions give you basic guidelines for preparing papers for conference proceedings. Follow the type sizes and formatting specifications carefully to ensure proper appearance.
+\end{abstract}
+
+\section{INTRODUCTION}
+Your goal is to simulate the usual appearance of papers in an \textit{IEEE conference proceedings}. Prepare your paper in full-size format, on US letter paper (8$\frac{1}{2}$ by 11 inches). For A4 paper, use the A4 settings.
+
+\subsection{Type Sizes and Typefaces}
+Follow the type sizes specified in Table~\ref{tab:type}. Times New Roman is the preferred font.
+
+\begin{table}[ht]
+\centering
+\caption{Type Sizes for Papers}
+\label{tab:type}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Type size (pts.)} & \textbf{Regular} & \textbf{Bold} & \textbf{Italic} \\ \hline
+6 & Table captions & & \\ \hline
+8 & Section titles & & \\ \hline
+9 & Main text & Abstract & Subheading \\ \hline
+10 & Authors' names & & \\ \hline
+11 & Paper title & & \\ \hline
+\end{tabular}
+\end{table}
+
+\section{HELPFUL HINTS}
+\subsection{Figures and Tables}
+Position figures and tables at the tops and bottoms of columns. Figure captions should be centered below the figures as shown in Fig.~\ref{fig:sample}.
+
+\begin{figure}[ht]
+\centering
+% \includegraphics[width=3in]{sample-figure}
+\caption{Sample figure caption.}
+\label{fig:sample}
+\end{figure}
+
+\subsection{References}
+Number citations consecutively in square brackets~\cite{ref1}. Use ``Ref.~[3]'' at the beginning of a sentence. 
+
+\subsection{Equations}
+Number equations consecutively:
+\begin{equation}
+a + b = c
+\end{equation}
+Symbols should be defined immediately following the equation.
+
+\section{UNITS}
+Use either SI (MKS) or CGS as primary units. Avoid combining SI and CGS units.
+
+\section{SOME COMMON MISTAKES}
+The word ``data'' is plural. Use proper punctuation within quotation marks: ``like this.'' 
+
+\section*{ACKNOWLEDGMENT}
+The preferred spelling is ``acknowledgment'' without an ``e'' after the ``g.''
+
+\balance % Balance columns on last page
+
+\begin{thebibliography}{9}
+\bibitem{ref1} G. Eason et al., ``On certain integrals,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529-551, 1955.
+\bibitem{ref2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism. Oxford: Clarendon, 1892.
+\end{thebibliography}
+
+\end{document}
