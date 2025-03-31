@@ -19,17 +19,31 @@
 
 \begin{document}
 
-\title{Preparation of Papers in Two-Column Format for IEEE Conference Proceedings}
+\title{Implementation and In-Depth Analysis of Flight Optimization Systems for Travel Agencies: A Multi-Criteria Approach}
 
-\author{J.~Q.~Author\\
-IEEE Conference Publishing\\
-445 Hoes Lane\\
-Piscataway, NJ 08854 USA}
+\author{Yasin Yeşilyurt\\
+TOBB ETÜ Artificial Intelligence
+Engineering\\
+Söğütözü caddesi TOBB ETÜ Konukevi\\
+Yenimahalle/Ankara\\
+yasinyesilyurt@hotmail.com}
 
 \maketitle
 
+% \begin{abstract}
+% This paper addresses the challenge of finding the best possible flight route for passengers.
+% The problem is formulated as a graph pathfinding problem. And algorithms, A*, Dijkstra's and Genetic algorithm are compared on their optimality, time and effectiveness of finding the optimal path. 
+% The algorithm is implemented in Python and tested on a dataset of past flight routes on United States. 
+% The results show that the A* algorithm is effective in finding the optimal flight route, with a significant reduction in travel time compared to traditional methods.
+% \end{abstract}
+
 \begin{abstract}
-These instructions give you basic guidelines for preparing papers for conference proceedings. Follow the type sizes and formatting specifications carefully to ensure proper appearance.
+This paper presents a multi-criteria flight optimization system for travel agencies, designed to recommend optimal flight routes by balancing cost, duration, and customer satisfaction. 
+The proposed framework employs A, Dijkstra's, and Genetic Algorithms implemented in Python to evaluate flight data spanning 1993-2023 from U.S. domestic routes, sourced from a Kaggle dataset containing 245,955 entries with parameters such as fare, distance, carrier dominance, and airport coordinates. 
+Key innovations include a hybrid approach combining heuristic pathfinding (using Haversine distance for A*) with genetic crossover operations to -> !!!!!! <- address multi-objective optimization. 
+Eesults demonstrate the effectiveness of A* and Dijkstra's algorithms in minimizing travel costs and time, while genetic algorithm gives sufficient results it is much slover than mentioned algorithms without proper optimization techniques. 
+The system currently provides personalized flight recommendations based on user preferences, with visualized outputs generated via the NetworkX library.
+This work contributes a scalable framework for enhancing decision-making in travel planning systems.
 \end{abstract}
 
 \section{INTRODUCTION}
