@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.29)  31 MAR 2025 14:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.29)  9 APR 2025 12:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -331,28 +331,125 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 50.
+
+Underfull \hbox (badness 2318) in paragraph at lines 43--46
+\OT1/ptm/m/n/10 com-pet-ing fac-tors such as cost, du-ra-tion, and cus-tomer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 47--50
+\OT1/ptm/m/n/10 meth-ods such as A*. How-ever, these meth-ods strug-gle
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
+\OT1/ptm/m/n/10 to han-dle multi-criteria op-ti-miza-tion, where trade-offs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 55.
 (C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 50.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 55.
  (C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 50.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 55.
  (C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 50.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 55.
  (C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 
 
+
+
+[1{C:/Users/alt_user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 75.
+ (C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Overfull \hbox (3.34924pt too wide) detected at line 90
+\OML/ztmcm/m/it/10 d \OT1/ztmcm/m/n/10 = 2\OML/ztmcm/m/it/10 R [] []
+ []
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 104.
+
+Underfull \hbox (badness 5008) in paragraph at lines 104--105
+\OT1/ptm/m/n/10 mon nodes (e.g., P1: A\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 B\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 C\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 D and P2:
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 104--105
+\OT1/ptm/m/n/10 A\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 X\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 C\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 Y yield chil-dren A\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 B\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 C\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 Y and
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 128.
+(C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+
+
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[2]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -367,30 +464,25 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
 
-[1{C:/Users/alt_user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
-
-
-] (report.aux)
+[3] (report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3718 strings out of 473523
- 62708 string characters out of 5713178
- 473216 words of memory out of 5000000
- 26913 multiletter control sequences out of 15000+600000
- 603791 words of font info for 116 fonts, out of 8000000 for 9000
+ 3800 strings out of 473523
+ 64057 string characters out of 5713178
+ 480216 words of memory out of 5000000
+ 26979 multiletter control sequences out of 15000+600000
+ 608217 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,11n,65p,365b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (1 page, 72525 bytes).
+ 57i,11n,65p,403b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\alt_user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (3 pages, 116730 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

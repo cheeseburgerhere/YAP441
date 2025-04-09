@@ -24,33 +24,125 @@
 \author{Yasin Yeşilyurt\\
 TOBB ETÜ Artificial Intelligence
 Engineering\\
-Söğütözü caddesi TOBB ETÜ Konukevi\\
+Söğütözü cad. TOBB ETÜ Konukevi\\
 Yenimahalle/Ankara\\
 yasinyesilyurt@hotmail.com}
 
 \maketitle
 
-% \begin{abstract}
-% This paper addresses the challenge of finding the best possible flight route for passengers.
-% The problem is formulated as a graph pathfinding problem. And algorithms, A*, Dijkstra's and Genetic algorithm are compared on their optimality, time and effectiveness of finding the optimal path. 
-% The algorithm is implemented in Python and tested on a dataset of past flight routes on United States. 
-% The results show that the A* algorithm is effective in finding the optimal flight route, with a significant reduction in travel time compared to traditional methods.
-% \end{abstract}
-
 \begin{abstract}
 This paper presents a multi-criteria flight optimization system for travel agencies, designed to recommend optimal flight routes by balancing cost, duration, and customer satisfaction. 
-The proposed framework employs A, Dijkstra's, and Genetic Algorithms implemented in Python to evaluate flight data spanning 1993-2023 from U.S. domestic routes, sourced from a Kaggle dataset containing 245,955 entries with parameters such as fare, distance, carrier dominance, and airport coordinates. 
-Key innovations include a hybrid approach combining heuristic pathfinding (using Haversine distance for A*) with genetic crossover operations to -> !!!!!! <- address multi-objective optimization. 
-Eesults demonstrate the effectiveness of A* and Dijkstra's algorithms in minimizing travel costs and time, while genetic algorithm gives sufficient results it is much slover than mentioned algorithms without proper optimization techniques. 
+The proposed framework employs A*, Dijkstra's, and Genetic Algorithms implemented in Python to evaluate flight data spanning 1993-2023 from U.S. domestic routes, sourced from a Kaggle dataset containing 245,955 entries with parameters such as fare, distance, carrier dominance, and airport coordinates. 
+Key innovations include a hybrid approach combining heuristic pathfinding (using Haversine distance for A*) with multi-objective A* to address multi-objective optimization. 
+Results demonstrate the effectiveness of A* and Dijkstra's algorithms in minimizing travel costs and time, while genetic algorithm gives sufficient results, it is much slower than mentioned algorithms without proper optimization techniques. 
 The system currently provides personalized flight recommendations based on user preferences, with visualized outputs generated via the NetworkX library.
 This work contributes a scalable framework for enhancing decision-making in travel planning systems.
 \end{abstract}
 
 \section{INTRODUCTION}
-Your goal is to simulate the usual appearance of papers in an \textit{IEEE conference proceedings}. Prepare your paper in full-size format, on US letter paper (8$\frac{1}{2}$ by 11 inches). For A4 paper, use the A4 settings.
+The growing complexity of air travel planning necessitates advanced systems to optimize flight routes while balancing competing factors such as cost, duration, and customer satisfaction. 
+Traditional travel recommendation tools often prioritize single objectives, such as minimizing price or travel time, but fail to account for multi-dimensional preferences or dynamic market conditions. 
+This limitation underscores the need for intelligent systems capable of synthesizing diverse parameters to deliver personalized and context-aware solutions.\\
 
-\subsection{Type Sizes and Typefaces}
-Follow the type sizes specified in Table~\ref{tab:type}. Times New Roman is the preferred font.
+Existing approaches to route optimization predominantly rely on classical graph algorithms like Dijkstra's or heuristic methods such as A*. 
+However, these methods struggle to handle multi-criteria optimization, where trade-offs between conflicting objectives (e.g., cost vs. comfort) must be quantified. 
+While recent studies have explored hybrid frameworks combining machine learning and optimization techniques, their reliance on simplified datasets or synthetic benchmarks limits real-world applicability.\\
+
+This paper addresses these gaps by proposing a hybrid algorithmic framework that integrates A* (heuristic Search), Dijkstra's algorithm (shortest-path), and Genetic Algorithms (evolutionary optimization) to optimize flight routes across three criteria: fare, travel time, and carrier-specific customer satisfaction metrics. 
+The system leverages a comprehensive dataset of 245,955 U.S. domestic flights (1993-2023), which includes real-world attributes such as historical fares, carrier dominance, and geographic coordinates. 
+Key innovations include:
+\begin{itemize}
+    \item A Haversine-based heuristic for A* to compute geodesic distances between airports, improving route accuracy.
+    \item A genetic crossover mechanism to evolve flight paths while preserving high-quality route segments.
+    \item A dynamic weighting system to prioritize user-defined preferences (e.g., cost-sensitive vs. time-sensitive travelers).
+    \item A multi-objective A* algorithm that evaluates trade-offs between fare, travel time, and customer satisfaction, enabling personalized recommendations.
+    \item Visualization of flight networks and optimized routes using the NetworkX library, enhancing decision-making.
+\end{itemize}
+Preliminary results demonstrate the viability of A* and Dijkstra's algorithms for single-objective optimization but the genetic algorithm exhibits slower performance. 
+Among the mentioned algorithms A* performs best in terms of cost and time minimization thus it has been selected as multi-criteria optimizer. 
+The remainder of this paper is organized as follows: Section II details the methodology and dataset, Section III discusses implementation challenges and results, and Section IV outlines future work to refine hybrid algorithm performance and integrate real-time customer feedback.
+
+
+\section{METHODOLOGY}
+The proposed flight optimization system follows a structured pipeline (Fig. 1) comprising data preprocessing, algorithmic implementation, and multi-criteria evaluation.  
+\subsection{Data Collection and Preprocessing}
+A dataset of 305,189 U.S. domestic flights (1993–2023) [1] was sourced from Kaggle, containing attributes such as fares, carriers, passenger counts, airport coordinates, and quarterly trends. Key preprocessing steps include:  
+\begin{itemize}
+    \item 1. Data Cleaning: Removal of 105,189 incomplete entries, retaining 200,000 flights with non-null values.  
+    \item 2. Subset Selection: Partitioning by year and quarter to reduce computational load.  
+    \item 3. Graph Construction: Representing airports as nodes and flights as edges in a weighted graph using Python’s `NetworkX` library. Edge weights combine:  
+    \begin{description}
+        \item [Cost] Normalized fare (\$) scaled by carrier dominance (market share).  
+        \item [Time] Flight duration derived from Haversine distance (km) between coordinates.  
+    \end{description}   
+
+\end{itemize}
+
+\subsection{Algorithm Design} 
+Three core algorithms with a multi-objective variant of these algorithms were implemented and compared:  
+
+\begin{enumerate}
+    \item A* Algorithm:  
+        \begin{itemize}
+            \item Heuristic Function: Geodesic distance between airports computed via the Haversine formula:  
+              \[
+              d = 2R \arcsin\sqrt{\sin^2\left(\frac{\Delta\phi}{2}\right) + \cos\phi_1 \cos\phi_2 \sin^2\left(\frac{\Delta\lambda}{2}\right)}
+              \]  
+              where \(R\) is Earth's radius, and \(\phi\), \(\lambda\) denote latitude/longitude.  
+            \item Cost Function: \(C = \alpha \cdot \text{fare} + \text{distance}\).  
+        \end{itemize}
+    
+    \item Dijkstra's Algorithm:  
+        \begin{itemize}
+            \item Computes globally optimal paths for a single criterion (e.g., minimal distance).  
+            \item Extended to support dynamic reweighting of edges based on user preferences.  
+        \end{itemize}
+    
+    \item Genetic Algorithm (GA):  
+        \begin{itemize}
+            \item Population Initialization: 100 chromosomes generated via greedy random walks.  
+            \item Crossover: Segments of parent paths sharing common nodes (e.g., P1: A→B→C→D and P2: A→X→C→Y yield children A→B→C→Y and A→X→C→D).  
+            \item Mutation: Random node insertion/deletion (currently disabled due to instability in variable-length paths).  
+            \item Fitness Function: Minimizes \(cost\) while penalizing excessive layovers.  
+        \end{itemize}
+\end{enumerate}
+
+\subsection{Implementation Details}
+\begin {itemize}
+    \item Environment: Python 3.9, Jupyter Notebook for interactive development.  
+    \item Libraries: `NetworkX` for graph representation, `pandas` for data manipulation, `numpy` for numerical operations.  
+    \item Visualization: Matplotlib and NetworkX for geographic rendering of flight paths.
+\end{itemize}  
+
+
+\subsection{Challenges and Mitigations}
+
+\subsubsection{Data Completeness and Geographic Accuracy}
+\begin{itemize}
+    \item \textbf{Challenge:} Initial datasets lacked geographic coordinates for airport entries, compromising distance calculations.
+    \textbf{Mitigation:} Found a different dataset that included most of its airport coordinates.
+\end{itemize}
+
+\subsubsection{Computational Bottlenecks}
+\begin{itemize}
+    \item \textbf{Challenge:} Rendering 200,000+ flights in \texttt{NetworkX} caused latency. 
+    \textbf{Mitigation:} Visualization was limited to 50--100 nodes when testing, complete graphs are rendered afterwards.
+\end{itemize}
+
+\subsubsection{Multi-Parameter Optimization}
+\begin{itemize}
+    \item \textbf{Challenge:} No standard function to unify cost, time, and comfort metrics. 
+    \textbf{Mitigation:} A user-configurable weighted sum (e.g., 70\% cost, 20\% time) was implemented.
+\end{itemize}
+
+\subsubsection{Genetic Algorithm Implementation}
+\begin{itemize}
+    \item \textbf{Challenge 1:} Python’s list/tuple structures caused O(n\textsuperscript{2}) complexity during crossover. 
+    \textbf{Mitigation:} Chromosomes were encoded as adjacency dictionaries for O(n) operations.
+    
+    \item \textbf{Challenge 2:} Immutable tuples disrupted mutation operations. 
+    \textbf{Mitigation:} Hybrid list-tuple representation enabled in-place edits and hashing.
+\end{itemize}
 
 \begin{table}[ht]
 \centering
