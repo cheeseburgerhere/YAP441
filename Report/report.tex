@@ -5,6 +5,9 @@
 \usepackage{cite}
 \usepackage{amsmath}
 \usepackage{balance} % For balancing last page columns
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{graphicx} % Required for images
 
 % Set margins for US Letter paper
 \usepackage[letterpaper,
@@ -78,6 +81,46 @@ A dataset of 305,189 U.S. domestic flights (1993–2023) [1] was sourced from Ka
 
 \end{itemize}
 
+Workflow diagram of the flight path finder pipeline is shown in Fig. \ref{fig:pipeline}.
+\begin{figure}[htbp]
+    \begin{tikzpicture}[
+        node distance=2cm,
+        stage/.style={
+            rectangle, 
+            rounded corners, 
+            minimum width=3cm, 
+            minimum height=1.5cm, 
+            text centered, 
+            draw=black, 
+            fill=blue!30
+        },
+        arrow/.style={
+            thick, 
+            -stealth, 
+            shorten >=2pt, 
+            shorten <=2pt
+        }
+    ]
+    
+    % Nodes
+    \node (data) [stage, fill=blue!30] {Raw Data};
+    \node (preprocessing) [stage, fill=orange!30, right=of data] {Preprocessing};
+    \node (algorithms) [stage, fill=green!30, below=of preprocessing] {Algorithms};
+    \node (visualization) [stage, fill=red!30, left=of algorithms] {Visualization};
+    
+    % Arrows
+    \draw [arrow] (data) -- (preprocessing);
+    \draw [arrow] (preprocessing) -- (algorithms);
+    \draw [arrow] (algorithms) -- (visualization);
+    
+    % Title
+    \node[above=0.5cm of data, font=\bfseries] {Data Processing Pipeline};
+    
+    \end{tikzpicture}
+    \caption{Flight path finder pipeline workflow from data to visualization}
+    \label{fig:pipeline}
+\end{figure}
+
 \subsection{Algorithm Design} 
 Three core algorithms with a multi-objective variant of these algorithms were implemented and compared:  
 
@@ -89,7 +132,7 @@ Three core algorithms with a multi-objective variant of these algorithms were im
               d = 2R \arcsin\sqrt{\sin^2\left(\frac{\Delta\phi}{2}\right) + \cos\phi_1 \cos\phi_2 \sin^2\left(\frac{\Delta\lambda}{2}\right)}
               \]  
               where \(R\) is Earth's radius, and \(\phi\), \(\lambda\) denote latitude/longitude.  
-            \item Cost Function: \(C = \alpha \cdot \text{fare} + \text{distance}\).  
+            \item Cost Function: \(C = \alpha \cdot \text{fare} + \beta \cdot \text{distance}\).  
         \end{itemize}
     
     \item Dijkstra's Algorithm:  
@@ -105,9 +148,23 @@ Three core algorithms with a multi-objective variant of these algorithms were im
             \item Mutation: Random node insertion/deletion (currently disabled due to instability in variable-length paths).  
             \item Fitness Function: Minimizes \(cost\) while penalizing excessive layovers.  
         \end{itemize}
+    \item Multi-Criteria A* Algorithm:  
+        \begin{itemize}
+            \item Heuristic Function: Haversine distance as in A*.
+            \item Cost Function: follows in Fig \ref{fig:my_image}.
+            \item Cost Function: \(C = \alpha \cdot \text{fare} + \beta \cdot \text{distance}\). 
+        \end{itemize}
 \end{enumerate}
 
-\subsection{Implementation Details}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.486\textwidth]{domination.png} % Replace with your filename
+    \caption{Pareto Optimal checker for Multi-Criteria A* Algorithm}
+    \label{fig:my_image}
+\end{figure}
+
+
+\section{Implementation Details}
 \begin {itemize}
     \item Environment: Python 3.9, Jupyter Notebook for interactive development.  
     \item Libraries: `NetworkX` for graph representation, `pandas` for data manipulation, `numpy` for numerical operations.  
@@ -119,75 +176,75 @@ Three core algorithms with a multi-objective variant of these algorithms were im
 
 \subsubsection{Data Completeness and Geographic Accuracy}
 \begin{itemize}
-    \item \textbf{Challenge:} Initial datasets lacked geographic coordinates for airport entries, compromising distance calculations.
-    \textbf{Mitigation:} Found a different dataset that included most of its airport coordinates.
+    \item Challenge: Initial datasets lacked geographic coordinates for airport entries, compromising distance calculations.
+    \item Mitigation: Found a different dataset that included most of its airport coordinates.
 \end{itemize}
 
 \subsubsection{Computational Bottlenecks}
 \begin{itemize}
-    \item \textbf{Challenge:} Rendering 200,000+ flights in \texttt{NetworkX} caused latency. 
-    \textbf{Mitigation:} Visualization was limited to 50--100 nodes when testing, complete graphs are rendered afterwards.
+    \item Challenge: Rendering 200,000+ flights in \texttt{NetworkX} caused latency. 
+    \item Mitigation: Visualization was limited to 50--100 nodes when testing, complete graphs are rendered afterwards.
 \end{itemize}
 
 \subsubsection{Multi-Parameter Optimization}
 \begin{itemize}
-    \item \textbf{Challenge:} No standard function to unify cost, time, and comfort metrics. 
-    \textbf{Mitigation:} A user-configurable weighted sum (e.g., 70\% cost, 20\% time) was implemented.
+    \item Challenge: No standard function to unify cost, time, and comfort metrics. 
+    \item Mitigation: A user-configurable weighted sum (e.g., 20\% cost, 80\% distance) and multi-parameter A* was implemented. 
 \end{itemize}
 
 \subsubsection{Genetic Algorithm Implementation}
 \begin{itemize}
-    \item \textbf{Challenge 1:} Python’s list/tuple structures caused O(n\textsuperscript{2}) complexity during crossover. 
-    \textbf{Mitigation:} Chromosomes were encoded as adjacency dictionaries for O(n) operations.
+    \item Challenge 1: Python's list/tuple structures caused inefficient chromosome representation. That caused shape mismatch errors during crossover and mutation operations.
+    \item Mitigation: Mutation instability was resolved by enforcing path continuity checks during chromosome editing. But a more planned chromosome representation is recommended for future work.
     
-    \item \textbf{Challenge 2:} Immutable tuples disrupted mutation operations. 
-    \textbf{Mitigation:} Hybrid list-tuple representation enabled in-place edits and hashing.
+    \item Challenge 2: Random Heuristic Walk algorithm caused mutations to be mostly longer paths. This caused mutated chromosomes to be longer than the original ones. 
+    \item Mitigation: Implemented a natural selection (sorting the chromosomes by their length) is implemented.
 \end{itemize}
 
-\begin{table}[ht]
-\centering
-\caption{Type Sizes for Papers}
-\label{tab:type}
-\begin{tabular}{|l|l|l|l|}
-\hline
-\textbf{Type size (pts.)} & \textbf{Regular} & \textbf{Bold} & \textbf{Italic} \\ \hline
-6 & Table captions & & \\ \hline
-8 & Section titles & & \\ \hline
-9 & Main text & Abstract & Subheading \\ \hline
-10 & Authors' names & & \\ \hline
-11 & Paper title & & \\ \hline
-\end{tabular}
-\end{table}
+% \begin{table}[ht]
+% \centering
+% \caption{Type Sizes for Papers}
+% \label{tab:type}
+% \begin{tabular}{|l|l|l|l|}
+% \hline
+% \textbf{Type size (pts.)} & \textbf{Regular} & \textbf{Bold} & \textbf{Italic} \\ \hline
+% 6 & Table captions & & \\ \hline
+% 8 & Section titles & & \\ \hline
+% 9 & Main text & Abstract & Subheading \\ \hline
+% 10 & Authors' names & & \\ \hline
+% 11 & Paper title & & \\ \hline
+% \end{tabular}
+% \end{table}
 
-\section{HELPFUL HINTS}
-\subsection{Figures and Tables}
-Position figures and tables at the tops and bottoms of columns. Figure captions should be centered below the figures as shown in Fig.~\ref{fig:sample}.
+% \section{HELPFUL HINTS}
+% \subsection{Figures and Tables}
+% Position figures and tables at the tops and bottoms of columns. Figure captions should be centered below the figures as shown in Fig.~\ref{fig:sample}.
 
-\begin{figure}[ht]
-\centering
-% \includegraphics[width=3in]{sample-figure}
-\caption{Sample figure caption.}
-\label{fig:sample}
-\end{figure}
+% \begin{figure}[ht]
+% \centering
+% % \includegraphics[width=3in]{sample-figure}
+% \caption{Sample figure caption.}
+% \label{fig:sample}
+% \end{figure}
 
-\subsection{References}
-Number citations consecutively in square brackets~\cite{ref1}. Use ``Ref.~[3]'' at the beginning of a sentence. 
+% \subsection{References}
+% Number citations consecutively in square brackets~\cite{ref1}. Use ``Ref.~[3]'' at the beginning of a sentence. 
 
-\subsection{Equations}
-Number equations consecutively:
-\begin{equation}
-a + b = c
-\end{equation}
-Symbols should be defined immediately following the equation.
+% \subsection{Equations}
+% Number equations consecutively:
+% \begin{equation}
+% a + b = c
+% \end{equation}
+% Symbols should be defined immediately following the equation.
 
-\section{UNITS}
-Use either SI (MKS) or CGS as primary units. Avoid combining SI and CGS units.
+% \section{UNITS}
+% Use either SI (MKS) or CGS as primary units. Avoid combining SI and CGS units.
 
-\section{SOME COMMON MISTAKES}
-The word ``data'' is plural. Use proper punctuation within quotation marks: ``like this.'' 
+% \section{SOME COMMON MISTAKES}
+% The word ``data'' is plural. Use proper punctuation within quotation marks: ``like this.'' 
 
-\section*{ACKNOWLEDGMENT}
-The preferred spelling is ``acknowledgment'' without an ``e'' after the ``g.''
+% \section*{ACKNOWLEDGMENT}
+% The preferred spelling is ``acknowledgment'' without an ``e'' after the ``g.''
 
 \balance % Balance columns on last page
 
