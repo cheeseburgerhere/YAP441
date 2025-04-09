@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.29)  9 APR 2025 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.29)  9 APR 2025 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -579,79 +579,133 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 
 
+<graph.png, id=4, 714.7503pt x 570.933pt>
+File: graph.png Graphic file (type png)
+<use graph.png>
+Package pdftex.def Info: graph.png  used on input line 70.
+(pdftex.def)             Requested size: 254.63937pt x 203.40134pt.
 
 
 [1{C:/Users/alt_user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 78.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 84.
  (C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Overfull \hbox (3.34924pt too wide) detected at line 133
+
+
+Overfull \hbox (3.34924pt too wide) detected at line 139
 \OML/ztmcm/m/it/10 d \OT1/ztmcm/m/n/10 = 2\OML/ztmcm/m/it/10 R [] []
  []
 
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 147.
+            Default family used instead on input line 153.
 
-Underfull \hbox (badness 5008) in paragraph at lines 147--148
+Underfull \hbox (badness 5008) in paragraph at lines 153--154
 \OT1/ptm/m/n/10 mon nodes (e.g., P1: A\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 B\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 C\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 D and P2:
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 147--148
+Underfull \hbox (badness 2334) in paragraph at lines 153--154
 \OT1/ptm/m/n/10 A\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 X\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 C\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 Y yield chil-dren A\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 B\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 C\TS1/cmr/m/n/10 ^^Y\OT1/ptm/m/n/10 Y and
+ []
+
+<domination.png, id=15, 562.35094pt x 118.94438pt>
+File: domination.png Graphic file (type png)
+<use domination.png>
+Package pdftex.def Info: domination.png  used on input line 167.
+(pdftex.def)             Requested size: 254.63937pt x 53.85841pt.
+
+
+[2 <./graph.png> <./domination.png>]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 191.
+ (C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+<astar.png, id=26, 581.92406pt x 671.50874pt>
+File: astar.png Graphic file (type png)
+<use astar.png>
+Package pdftex.def Info: astar.png  used on input line 243.
+(pdftex.def)             Requested size: 254.63937pt x 293.83559pt.
+
+
+<dijkstra.png, id=27, 810.77907pt x 593.96906pt>
+File: dijkstra.png Graphic file (type png)
+<use dijkstra.png>
+Package pdftex.def Info: dijkstra.png  used on input line 269.
+(pdftex.def)             Requested size: 254.63937pt x 186.54839pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
+ \OT1/ptm/m/it/10 1) The-o-ret-i-cal Ba-sis: [][] \OT1/ptm/m/n/10 Multi-Objective A* com-bines
  []
 
 
 
-<domination.png, id=13, 562.35094pt x 118.94438pt>
-File: domination.png Graphic file (type png)
-<use domination.png>
-Package pdftex.def Info: domination.png  used on input line 161.
-(pdftex.def)             Requested size: 254.63937pt x 53.85841pt.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 185.
-(C:\Users\alt_user\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
+[3 <./astar.png>]
+<multiAstar.png, id=34, 675.27281pt x 716.6775pt>
+File: multiAstar.png Graphic file (type png)
+<use multiAstar.png>
+Package pdftex.def Info: multiAstar.png  used on input line 296.
+(pdftex.def)             Requested size: 254.63937pt x 270.25159pt.
 
-[2 <./domination.png>]
+
+
+
+[4 <./dijkstra.png> <./multiAstar.png>]
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 369.
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+[]\OT1/ptm/m/n/8 B. Jikadara, ``US Air-line Flight Routes and Fares
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+\OT1/ptm/m/n/8 (1993-2024),'' Kag-gle, 2024. [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+\OT1/ptm/m/n/8 https://www.kaggle.com/datasets/bhavikjikadara/us-airline-flight-routes-
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -667,27 +721,24 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-
-Overfull \vbox (0.54002pt too high) has occurred while \output is active []
-
- [3] (report.aux)
+[5] (report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14701 strings out of 473523
- 303788 string characters out of 5713178
- 688886 words of memory out of 5000000
- 37662 multiletter control sequences out of 15000+600000
- 608217 words of font info for 128 fonts, out of 8000000 for 9000
+ 14733 strings out of 473523
+ 304294 string characters out of 5713178
+ 685971 words of memory out of 5000000
+ 37691 multiletter control sequences out of 15000+600000
+ 610081 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,91p,476b,816s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\alt_user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (3 pages, 127739 bytes).
+ <C:\Users\alt_user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/alt_user/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (5 pages, 553664 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

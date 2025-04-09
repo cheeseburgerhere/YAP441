@@ -104,7 +104,7 @@ def genetic_algorithm(G ,start, end, sampleSize=100, parentCount=10, generations
     generation = []
     # print("chromosomes",len(chromosomes))
     for _ in range(parentCount):
-        p1 = rouletteWheel(chromosomes, int(sampleSize * 0.4))
+        p1 = rouletteWheel(chromosomes, int(sampleSize * 0.4)) 
         p2 = rouletteWheel(chromosomes, int(sampleSize * 0.4)) # Select two parents using the roulette wheel selection method
         childs = crossover(p1, p2, G)
         # Introduces random mutations in some offspring with a low probability (3%)

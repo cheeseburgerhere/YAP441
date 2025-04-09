@@ -167,10 +167,6 @@ def multi_criteria_a_star(graph, start, goal, h):
             # Check if this new vector is dominated by existing ones
             new_vec = (new_dist, new_money)
             if is_dominated(new_vec, cost_map[neighbor]):
-                # if neighbor==goal:
-                #     print("Dominated vector: ", new_vec, " for neighbor: ", neighbor)
-                #     print("Existing vectors: ", cost_map[neighbor])
-                #     print("---------------")
                 continue
 
             # Add to cost_map and update predecessors
